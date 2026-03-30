@@ -50,7 +50,7 @@ PRD 작성? → `/write-prd`
 1. **Customize** 열기 (왼쪽 하단)
 2. **Browse plugins** → **Personal** → **+** 이동
 3. **Add marketplace from GitHub** 선택
-4. 입력: `phuryn/pm-skills`
+4. 입력: `lucas-flatwhite/pm-skills-ko`
 
 8개 플러그인 모두 자동 설치됩니다.
 
@@ -60,17 +60,17 @@ PRD 작성? → `/write-prd`
 
 ```bash
 # 1단계: 마켓플레이스 추가
-claude plugin marketplace add phuryn/pm-skills
+claude plugin marketplace add lucas-flatwhite/pm-skills-ko
 
 # 2단계: 개별 플러그인 설치
-claude plugin install pm-toolkit@pm-skills
-claude plugin install pm-product-strategy@pm-skills
-claude plugin install pm-product-discovery@pm-skills
-claude plugin install pm-market-research@pm-skills
-claude plugin install pm-data-analytics@pm-skills
-claude plugin install pm-marketing-growth@pm-skills
-claude plugin install pm-go-to-market@pm-skills
-claude plugin install pm-execution@pm-skills
+claude plugin install pm-toolkit@pm-skills-ko
+claude plugin install pm-product-strategy@pm-skills-ko
+claude plugin install pm-product-discovery@pm-skills-ko
+claude plugin install pm-market-research@pm-skills-ko
+claude plugin install pm-data-analytics@pm-skills-ko
+claude plugin install pm-marketing-growth@pm-skills-ko
+claude plugin install pm-go-to-market@pm-skills-ko
+claude plugin install pm-execution@pm-skills-ko
 ```
 
 ### 다른 AI 어시스턴트 (스킬만)
@@ -431,6 +431,30 @@ git diff upstream/main -- pm-product-discovery/skills/new-skill/SKILL.md
 ```bash
 python3 validate_plugins.py
 ```
+
+## 기여 안내
+
+[CONTRIBUTING.md](CONTRIBUTING.md)를 참조하세요.
+
+## Windows 알려진 문제
+
+Cowork가 불안정하여 VM을 시작할 수 없는 경우 ([claude-code/issues/27010](https://github.com/anthropics/claude-code/issues/27010)), 다음을 시도하세요:
+
+```powershell
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-WindowStyle Hidden -Command `"if ((Get-Service CoworkVMService).Status -ne 'Running') { Start-Service CoworkVMService }`""
+$trigger = New-ScheduledTaskTrigger -RepetitionInterval (New-TimeSpan -Minutes 1) -Once -At (Get-Date)
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+Register-ScheduledTask -TaskName "CoworkVMServiceMonitor" `
+  -Action $action `
+  -Trigger $trigger `
+  -Settings $settings `
+  -RunLevel Highest `
+  -User "SYSTEM"
+```
+
+이 방법으로 Windows 문제의 90%가 해결됩니다.
+
+나머지 10%: services.msc를 열고 "Claude" 서비스를 수동으로 시작하세요.
 
 ## 원작자
 
