@@ -71,7 +71,7 @@ Claude Code와 Cowork에 최적화. 스킬은 다른 AI 어시스턴트와도 �
 1. **Customize** 열기 (왼쪽 하단)
 2. **Browse plugins** → **Personal** → **+** 이동
 3. **Add marketplace from GitHub** 선택
-4. 입력: `lucas-flatwhite/pm-skills-ko`
+4. 입력: `phuryn/pm-skills`
 
 8개 플러그인 모두 자동 설치됩니다.
 
@@ -81,17 +81,17 @@ Claude Code와 Cowork에 최적화. 스킬은 다른 AI 어시스턴트와도 �
 
 ```bash
 # 1단계: 마켓플레이스 추가
-claude plugin marketplace add lucas-flatwhite/pm-skills-ko
+claude plugin marketplace add phuryn/pm-skills
 
 # 2단계: 개별 플러그인 설치
-claude plugin install pm-toolkit@pm-skills-ko
-claude plugin install pm-product-strategy@pm-skills-ko
-claude plugin install pm-product-discovery@pm-skills-ko
-claude plugin install pm-market-research@pm-skills-ko
-claude plugin install pm-data-analytics@pm-skills-ko
-claude plugin install pm-marketing-growth@pm-skills-ko
-claude plugin install pm-go-to-market@pm-skills-ko
-claude plugin install pm-execution@pm-skills-ko
+claude plugin install pm-toolkit@pm-skills
+claude plugin install pm-product-strategy@pm-skills
+claude plugin install pm-product-discovery@pm-skills
+claude plugin install pm-market-research@pm-skills
+claude plugin install pm-data-analytics@pm-skills
+claude plugin install pm-marketing-growth@pm-skills
+claude plugin install pm-go-to-market@pm-skills
+claude plugin install pm-execution@pm-skills
 ```
 
 ### 다른 AI 어시스턴트 (스킬만)
