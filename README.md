@@ -1,4 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
+[![한국어](https://img.shields.io/badge/lang-한국어-blue?style=flat-square)](#)
+[![Upstream](https://img.shields.io/badge/upstream-phuryn%2Fpm--skills-lightgrey?style=flat-square)](https://github.com/phuryn/pm-skills)
 
 # PM Skills 한국어판: 더 나은 제품 의사결정을 위한 AI 운영 시스템
 
@@ -11,17 +14,35 @@ Claude Code와 Cowork에 최적화. 스킬은 다른 AI 어시스턴트와도 �
 > **원본**: [phuryn/pm-skills](https://github.com/phuryn/pm-skills) by [Paweł Huryn](https://www.productcompass.pm)
 > **한국어 번역**: [lucas-flatwhite/pm-skills-ko](https://github.com/lucas-flatwhite/pm-skills-ko)
 
+## 목차
+
+- [시작하기](#시작하기)
+- [왜 PM Skills인가?](#왜-pm-skills인가)
+- [작동 방식 (스킬, 커맨드, 플러그인)](#작동-방식-스킬-커맨드-플러그인)
+- [설치](#설치)
+- [사용 가능한 플러그인](#사용-가능한-플러그인)
+- [업스트림 동기화](#업스트림-동기화)
+- [검증](#검증)
+- [기여 안내](#기여-안내)
+- [Windows 알려진 문제](#windows-알려진-문제)
+- [원작자](#원작자)
+- [라이선스](#라이선스)
+
 ## 시작하기
 
-새 아이디어? → `/discover`
-전략적 방향이 필요? → `/strategy`
-PRD 작성? → `/write-prd`
-런칭 계획? → `/plan-launch`
-메트릭 정의? → `/north-star`
+> 먼저 [설치](#설치)를 완료한 후 아래 커맨드를 사용하세요.
+
+| 상황 | 커맨드 |
+| --- | --- |
+| 새 아이디어? | `/discover` |
+| 전략적 방향이 필요? | `/strategy` |
+| PRD 작성? | `/write-prd` |
+| 런칭 계획? | `/plan-launch` |
+| 메트릭 정의? | `/north-star` |
 
 ## 왜 PM Skills인가?
 
-일반 AI는 텍스트를 줍니다. PM Skills는 구조를 줍니다.
+일반 AI는 텍스트를 생성합니다. PM Skills는 **구조화된 의사결정**을 제공합니다.
 
 각 스킬에는 검증된 PM 프레임워크가 인코딩되어 있습니다 — 디스커버리, 가정 매핑, 우선순위 결정, 전략 — 그리고 단계별로 안내합니다. Teresa Torres, Marty Cagan, Alberto Savoia의 엄격한 방법론이 일상 워크플로우에 내장됩니다.
 
@@ -313,7 +334,7 @@ PM을 위한 데이터 분석: SQL 쿼리 생성, 코호트 분석, A/B 테스�
 <details>
 <summary><strong>6. pm-go-to-market</strong> — 비치헤드 세그먼트, ICP, 메시징, 성장 루프, GTM 모션, 배틀카드 (6개 스킬, 3개 커맨드)</summary>
 
-GTM 전략: 비치헤드 세그먼트, 이상적 고객 프로파일, 메시징, 성장 루프, GTM 모션, 경쟁사 배틀카드.
+GTM 전략: 비치헤드 세그먼트, 이상적 고객 프로필(ICP), 메시징, 성장 루프, GTM 모션, 영업 배틀카드.
 
 **스킬 (6):**
 
